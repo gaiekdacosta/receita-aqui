@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,7 +35,7 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         nav {
@@ -143,7 +144,7 @@
         .hero-image img {
             max-width: 100%;
             height: auto;
-            filter: drop-shadow(0 10px 30px rgba(0,0,0,0.3));
+            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
         }
 
         /* Features Section */
@@ -170,13 +171,13 @@
             padding: 2rem;
             border-radius: 15px;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .feature-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
 
         .feature-icon {
@@ -196,16 +197,33 @@
             background: white;
         }
 
-        .steps-grid {
+        .how-it-works-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
             margin-top: 3rem;
         }
 
+        .steps-container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
         .step {
-            text-align: center;
-            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .step:hover {
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .step-number {
@@ -219,7 +237,32 @@
             justify-content: center;
             font-size: 1.5rem;
             font-weight: bold;
-            margin: 0 auto 1rem;
+            flex-shrink: 0;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-content h3 {
+            color: #1e3c72;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .step-content p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .how-it-works-image {
+            text-align: center;
+        }
+
+        .how-it-works-image img {
+            max-width: 100%;
+            height: auto;
+            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
         }
 
         /* Target Audience */
@@ -240,7 +283,7 @@
             padding: 2rem;
             border-radius: 15px;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         }
 
         .audience-icon {
@@ -261,7 +304,7 @@
             background: #f8f9fa;
             padding: 3rem;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
 
         .form-placeholder {
@@ -291,7 +334,7 @@
             background: white;
             padding: 2rem;
             border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         }
 
         .testimonial-text {
@@ -302,6 +345,63 @@
 
         .testimonial-author {
             font-weight: bold;
+            color: #2a5298;
+        }
+
+        .tipos-receitas {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+
+        .tipos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .tipo-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-top: 4px solid #2a5298;
+        }
+
+        .tipo-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .tipo-icon {
+            font-size: 3rem;
+            color: #2a5298;
+            margin-bottom: 1.5rem;
+        }
+
+        .tipo-card h3 {
+            color: #1e3c72;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .tipo-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .tipo-examples {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .tipo-examples strong {
             color: #2a5298;
         }
 
@@ -417,10 +517,23 @@
             }
 
             .features-grid,
-            .steps-grid,
             .audience-grid,
             .testimonials-grid {
                 grid-template-columns: 1fr;
+            }
+
+            .how-it-works-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .step {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .step:hover {
+                transform: none;
             }
         }
 
@@ -430,6 +543,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -462,6 +576,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Header -->
     <header>
@@ -488,13 +603,14 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <h1>Renove suas receitas médicas sem sair de casa</h1>
-                    <p>Telemedicina especializada em renovação de receitas, pedidos de exames e atestados de aptidão física. Rápido, seguro e conveniente.</p>
+                    <p>Telemedicina especializada em renovação de receitas, pedidos de exames e atestados de aptidão
+                        física. Rápido, seguro e conveniente.</p>
                     <a href="#form" class="cta-button">
                         <i class="fas fa-rocket"></i> Começar Agora
                     </a>
                 </div>
                 <div class="hero-image">
-                    <img src="https://undraw.co/api/illustration/doctor.svg" alt="Médico Online" width="400">
+                    <img src="./img/undraw_file-search_cbur.svg" alt="Médico Online" width="400">
                 </div>
             </div>
         </div>
@@ -510,21 +626,24 @@
                         <i class="fas fa-prescription-bottle-alt"></i>
                     </div>
                     <h3>Renovação de Receitas</h3>
-                    <p>Renove suas receitas médicas de forma rápida e segura, sem precisar sair de casa. Ideal para medicamentos de uso contínuo.</p>
+                    <p>Renove suas receitas médicas de forma rápida e segura, sem precisar sair de casa. Ideal para
+                        medicamentos de uso contínuo.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-vial"></i>
                     </div>
                     <h3>Pedidos de Exames</h3>
-                    <p>Solicite exames laboratoriais e de imagem com praticidade. Nossos médicos avaliam sua necessidade e emitem as solicitações.</p>
+                    <p>Solicite exames laboratoriais e de imagem com praticidade. Nossos médicos avaliam sua necessidade
+                        e emitem as solicitações.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-dumbbell"></i>
                     </div>
                     <h3>Atestados de Aptidão</h3>
-                    <p>Obtenha atestados para atividades físicas, academia, esportes e outras finalidades de forma online e certificada.</p>
+                    <p>Obtenha atestados para atividades físicas, academia, esportes e outras finalidades de forma
+                        online e certificada.</p>
                 </div>
             </div>
         </div>
@@ -534,21 +653,32 @@
     <section id="how-it-works" class="how-it-works">
         <div class="container">
             <h2 class="section-title">Como Funciona</h2>
-            <div class="steps-grid">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Preencha o Formulário</h3>
-                    <p>Informe seus dados e descreva sua necessidade médica de forma detalhada.</p>
+            <div class="how-it-works-content">
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Preencha o Formulário</h3>
+                            <p>Informe seus dados e descreva sua necessidade médica de forma detalhada.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Consulta Online</h3>
+                            <p>Nosso médico especialista fará uma avaliação completa através de videochamada.</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Receba Seus Documentos</h3>
+                            <p>Receita, exames ou atestados são enviados digitalmente com validade legal.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Consulta Online</h3>
-                    <p>Nosso médico especialista fará uma avaliação completa através de videochamada.</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Receba Seus Documentos</h3>
-                    <p>Receita, exames ou atestados são enviados digitalmente com validade legal.</p>
+                <div class="how-it-works-image">
+                    <img src="./img/undraw_document-analysis_3c0y.svg" alt="Processo Online" width="400">
                 </div>
             </div>
         </div>
@@ -591,20 +721,6 @@
         </div>
     </section>
 
-    <!-- Form Section -->
-    <section id="form" class="form-section">
-        <div class="container">
-            <h2 class="section-title">Inicie Seu Atendimento</h2>
-            <div class="form-container">
-                <div class="form-placeholder">
-                    <i class="fas fa-clipboard-list" style="font-size: 3rem; margin-bottom: 1rem; color: #2a5298;"></i>
-                    <h3>Formulário de Atendimento</h3>
-                    <p>Aqui será inserido o formulário personalizado para coleta de dados dos pacientes, incluindo histórico médico, medicamentos em uso e motivo da consulta.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Testimonials -->
     <section class="testimonials">
         <div class="container">
@@ -612,75 +728,24 @@
             <div class="testimonials-grid">
                 <div class="testimonial">
                     <div class="testimonial-text">
-                        "Excelente serviço! Consegui renovar minha receita de diabetes sem sair de casa. O médico foi muito atencioso e o processo foi rápido."
+                        "Excelente serviço! Consegui renovar minha receita de diabetes sem sair de casa. O médico foi
+                        muito atencioso e o processo foi rápido."
                     </div>
                     <div class="testimonial-author">- Maria Santos, 58 anos</div>
                 </div>
                 <div class="testimonial">
                     <div class="testimonial-text">
-                        "Como executivo, não tinha tempo para ir ao médico. O Receita Já me salvou! Processo prático e seguro."
+                        "Como executivo, não tinha tempo para ir ao médico. O Receita Já me salvou! Processo prático e
+                        seguro."
                     </div>
                     <div class="testimonial-author">- Carlos Oliveira, 42 anos</div>
                 </div>
                 <div class="testimonial">
                     <div class="testimonial-text">
-                        "Minha mãe idosa tem dificuldade de locomoção. Esse serviço trouxe muita comodidade para nossa família."
+                        "Minha mãe idosa tem dificuldade de locomoção. Esse serviço trouxe muita comodidade para nossa
+                        família."
                     </div>
                     <div class="testimonial-author">- Ana Paula, 35 anos</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="faq">
-        <div class="container">
-            <h2 class="section-title">Perguntas Frequentes</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>O serviço tem validade legal?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        Sim! Todos os documentos emitidos têm validade legal conforme regulamentação do CFM (Conselho Federal de Medicina) para telemedicina.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Quanto tempo demora o atendimento?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        O atendimento é realizado em até 24 horas após o preenchimento do formulário, dependendo da disponibilidade médica.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Posso renovar qualquer tipo de receita?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        Renovamos receitas para medicamentos de uso contínuo. Medicamentos controlados podem ter restrições específicas.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>O atendimento é feito por médicos registrados?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        Sim, todos os nossos médicos são devidamente registrados no CRM e especializados em suas áreas de atuação.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Como recebo os documentos?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        Os documentos são enviados digitalmente por email em formato PDF com assinatura digital válida.
-                    </div>
                 </div>
             </div>
         </div>
@@ -716,13 +781,135 @@
         </div>
     </section>
 
+    <section class="tipos-receitas">
+        <div class="container">
+            <h2 class="section-title">Tipos de Receitas</h2>
+            <div class="tipos-grid">
+                <div class="tipo-card">
+                    <div class="tipo-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Receitas Cardiovasculares</h3>
+                    <p>Medicamentos para controle de pressão arterial, colesterol e outras condições cardíacas.</p>
+                    <div class="tipo-examples">
+                        <strong>Exemplos:</strong> Losartana, Atenolol, Sinvastatina, Aspirina
+                    </div>
+                </div>
+                <div class="tipo-card">
+                    <div class="tipo-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3>Receitas para Diabetes</h3>
+                    <p>Medicamentos para controle glicêmico e tratamento do diabetes tipo 1 e 2.</p>
+                    <div class="tipo-examples">
+                        <strong>Exemplos:</strong> Metformina, Glibenclamida, Insulina, Gliclazida
+                    </div>
+                </div>
+                <div class="tipo-card">
+                    <div class="tipo-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3>Receitas de Uso Contínuo</h3>
+                    <p>Medicamentos para condições crônicas que necessitam de uso prolongado.</p>
+                    <div class="tipo-examples">
+                        <strong>Exemplos:</strong> Anticonvulsivantes, Antidepressivos, Hormônios
+                    </div>
+                </div>
+                <div class="tipo-card">
+                    <div class="tipo-icon">
+                        <i class="fas fa-lungs"></i>
+                    </div>
+                    <h3>Receitas Respiratórias</h3>
+                    <p>Medicamentos para asma, bronquite e outras condições respiratórias.</p>
+                    <div class="tipo-examples">
+                        <strong>Exemplos:</strong> Bombinhas, Corticoides, Broncodilatadores
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">Perguntas Frequentes</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>O serviço tem validade legal?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Sim! Todos os documentos emitidos têm validade legal conforme regulamentação do CFM (Conselho
+                        Federal de Medicina) para telemedicina.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Quanto tempo demora o atendimento?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        O atendimento é realizado em até 24 horas após o preenchimento do formulário, dependendo da
+                        disponibilidade médica.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Posso renovar qualquer tipo de receita?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Renovamos receitas para medicamentos de uso contínuo. Medicamentos controlados podem ter
+                        restrições específicas.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>O atendimento é feito por médicos registrados?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Sim, todos os nossos médicos são devidamente registrados no CRM e especializados em suas áreas
+                        de atuação.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Como recebo os documentos?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Os documentos são enviados digitalmente por email em formato PDF com assinatura digital válida.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section id="form" class="form-section">
+        <div class="container">
+            <h2 class="section-title">Inicie Seu Atendimento</h2>
+            <div class="form-container">
+                <div class="form-placeholder">
+                    <i class="fas fa-clipboard-list" style="font-size: 3rem; margin-bottom: 1rem; color: #2a5298;"></i>
+                    <h3>Formulário de Atendimento</h3>
+                    <p>Aqui será inserido o formulário personalizado para coleta de dados dos pacientes, incluindo
+                        histórico médico, medicamentos em uso e motivo da consulta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer id="contact">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <h3><i class="fas fa-heartbeat"></i> Receita Já</h3>
-                    <p>Telemedicina especializada em renovação de receitas, pedidos de exames e atestados de aptidão física.</p>
+                    <p>Telemedicina especializada em renovação de receitas, pedidos de exames e atestados de aptidão
+                        física.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Contato</h3>
@@ -766,7 +953,7 @@
             question.addEventListener('click', () => {
                 const answer = question.nextElementSibling;
                 const icon = question.querySelector('i');
-                
+
                 answer.classList.toggle('active');
                 icon.classList.toggle('fa-chevron-down');
                 icon.classList.toggle('fa-chevron-up');
@@ -830,4 +1017,5 @@
         formObserver.observe(formSection);
     </script>
 </body>
+
 </html>
