@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Receita Já - Telemedicina Especializada</title>
+    <title>Receita Aqui - Telemedicina Especializada</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
         * {
@@ -106,7 +106,7 @@
         }
 
         .hero-text h1 {
-            font-size: 3rem;
+            font-size: 2.8rem;
             margin-bottom: 1rem;
             line-height: 1.2;
         }
@@ -117,8 +117,15 @@
             opacity: 0.9;
         }
 
+        .action-hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+
         .cta-button {
-            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            background: linear-gradient(45deg, #25D366, #128C7E);
             color: white;
             padding: 15px 40px;
             border: none;
@@ -126,15 +133,24 @@
             font-size: 1.1rem;
             font-weight: bold;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
             text-decoration: none;
             display: inline-block;
-            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+            box-shadow: 0 4px 12px rgba(18, 140, 126, 0.3);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
         .cta-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(18, 140, 126, 0.4);
+        }
+
+        .btn-receitas {
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
         }
 
         .hero-image {
@@ -189,6 +205,7 @@
         .feature-card h3 {
             color: #1e3c72;
             margin-bottom: 1rem;
+            line-height: 1.1em;
         }
 
         /* How It Works */
@@ -365,14 +382,14 @@
             padding: 2.5rem;
             border-radius: 15px;
             text-align: center;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
             border-top: 4px solid #2a5298;
         }
 
         .tipo-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
         }
 
         .tipo-icon {
@@ -403,50 +420,6 @@
 
         .tipo-examples strong {
             color: #2a5298;
-        }
-
-        /* FAQ */
-        .faq {
-            padding: 80px 0;
-            background: white;
-        }
-
-        .faq-container {
-            max-width: 800px;
-            margin: 0 auto;
-            margin-top: 3rem;
-        }
-
-        .faq-item {
-            background: #f8f9fa;
-            margin-bottom: 1rem;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .faq-question {
-            background: #2a5298;
-            color: white;
-            padding: 1.5rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background 0.3s;
-        }
-
-        .faq-question:hover {
-            background: #1e3c72;
-        }
-
-        .faq-answer {
-            padding: 1.5rem;
-            display: none;
-            color: #555;
-        }
-
-        .faq-answer.active {
-            display: block;
         }
 
         /* Footer */
@@ -582,13 +555,14 @@
     <header>
         <nav class="container">
             <div class="logo">
-                <i class="fas fa-heartbeat"></i> Receita Já
+                <i class="fas fa-heartbeat"></i> Receita Aqui
             </div>
             <ul class="nav-links">
                 <li><a href="#home">Início</a></li>
                 <li><a href="#services">Serviços</a></li>
                 <li><a href="#how-it-works">Como Funciona</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#receitas">Receitas</a></li>
                 <li><a href="#contact">Contato</a></li>
             </ul>
             <button class="mobile-menu">
@@ -602,12 +576,20 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Renove suas receitas médicas sem sair de casa</h1>
-                    <p>Telemedicina especializada em renovação de receitas, pedidos de exames e atestados de aptidão
-                        física. Rápido, seguro e conveniente.</p>
-                    <a href="#form" class="cta-button">
-                        <i class="fas fa-rocket"></i> Começar Agora
-                    </a>
+                    <h1>Renovação de Receitas Médicas Online</h1>
+                    <p>
+                        Telemedicina especializada para renovar suas receitas controladas de uso contínuo, receitas
+                        psiquiátricas,
+                        receitas azuis e amarelas e solicitar exames de forma rápida e segura.
+                    </p>
+                    <div class="action-hero">
+                        <a href="https://wa.me/" target="_blank" class="cta-button">
+                            <i class="fab fa-whatsapp"></i> Iniciar Agora
+                        </a>
+                        <a href="#receitas" class="btn-receitas">
+                            Tipos de receitas
+                        </a>
+                    </div>
                 </div>
                 <div class="hero-image">
                     <img src="./img/undraw_file-search_cbur.svg" alt="Médico Online" width="400">
@@ -623,62 +605,35 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-prescription-bottle-alt"></i>
+                        <i class="fa-solid fa-tablets"></i>
                     </div>
-                    <h3>Renovação de Receitas</h3>
-                    <p>Renove suas receitas médicas de forma rápida e segura, sem precisar sair de casa. Ideal para
-                        medicamentos de uso contínuo.</p>
+                    <h3>Renovação de Receitas - BRANCAS</h3>
+                    <p>
+                        Renove suas receitas Médicas de forma rápida e segura, sem sair de casa.
+                        Ideal para medicamentos de uso contínuo. Enviamos por WhatsApp
+                    </p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-vial"></i>
+                        <i class="fa-solid fa-capsules"></i>
                     </div>
-                    <h3>Pedidos de Exames</h3>
-                    <p>Solicite exames laboratoriais e de imagem com praticidade. Nossos médicos avaliam sua necessidade
-                        e emitem as solicitações.</p>
+                    <h3>Renovação de Receitas - AZUL ou AMARELA</h3>
+                    <p>
+                        Renove suas receita seguindo as normas da Anvisa.
+                        Nós enviamos a receita física diretamente para você via Sedex
+                        (consulte valor adicional do frete).
+                    </p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
-                        <i class="fas fa-dumbbell"></i>
+                        <i class="fa-solid fa-microscope"></i>
                     </div>
-                    <h3>Atestados de Aptidão</h3>
-                    <p>Obtenha atestados para atividades físicas, academia, esportes e outras finalidades de forma
-                        online e certificada.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works -->
-    <section id="how-it-works" class="how-it-works">
-        <div class="container">
-            <h2 class="section-title">Como Funciona</h2>
-            <div class="how-it-works-content">
-                <div class="steps-container">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <h3>Preencha o Formulário</h3>
-                            <p>Informe seus dados e descreva sua necessidade médica de forma detalhada.</p>
-                        </div>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <h3>Consulta Online</h3>
-                            <p>Nosso médico especialista fará uma avaliação completa através de videochamada.</p>
-                        </div>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <h3>Receba Seus Documentos</h3>
-                            <p>Receita, exames ou atestados são enviados digitalmente com validade legal.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="how-it-works-image">
-                    <img src="./img/undraw_document-analysis_3c0y.svg" alt="Processo Online" width="400">
+                    <h3>Pedidos de Exames Com Prescrição</h3>
+                    <p>
+                        Solicite exames laboratoriais e de imagem com prescrição médica online, de forma rápida e
+                        segura.
+                        Todo o processo é ágil, documentado e realizado em conformidade com as normas de saúde.
+                    </p>
                 </div>
             </div>
         </div>
@@ -721,8 +676,56 @@
         </div>
     </section>
 
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Como Funciona</h2>
+            <div class="how-it-works-content">
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Qual receita você deseja renovar?</h3>
+                            <p>
+                                Envie uma foto ou PDF da receita anterior aqui mesmo ou 
+                                informe a medicação pelo WhatsApp.
+                                Serão mandadas as instruções para confirmar o pagamento, cartão ou PIX.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Avaliação médica</h3>
+                            <p>
+                                Um médico irá analisar sua solicitação e definir a 
+                                conduta adequada (o médico têm autonomia):
+                                emissão da receita ou solicitação de informações complementares, 
+                                se necessário.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Receba sua receita</h3>
+                            <p>
+                                Receitas controladas tipo BRANCA são enviadas por e-mail ou WhatsApp. 
+                                Para medicamentos com receituário controlado (AZUL OU AMARELA). 
+                                o envio é feito pelos Correios via carta registrada ou Sedex (com taxa adicional).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="how-it-works-image">
+                    <img src="./img/undraw_document-analysis_3c0y.svg" alt="Processo Online" width="400">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Testimonials -->
-    <section class="testimonials">
+    <section id="depoimentos" class="testimonials">
         <div class="container">
             <h2 class="section-title">Depoimentos</h2>
             <div class="testimonials-grid">
@@ -735,7 +738,7 @@
                 </div>
                 <div class="testimonial">
                     <div class="testimonial-text">
-                        "Como executivo, não tinha tempo para ir ao médico. O Receita Já me salvou! Processo prático e
+                        "Como executivo, não tinha tempo para ir ao médico. O Receita Aqui me salvou! Processo prático e
                         seguro."
                     </div>
                     <div class="testimonial-author">- Carlos Oliveira, 42 anos</div>
@@ -754,7 +757,7 @@
     <!-- Benefits Section -->
     <section class="features" style="background: linear-gradient(135deg, #e8f5e8 0%, #f1f8e9 100%);">
         <div class="container">
-            <h2 class="section-title">Por que Escolher o Receita Já?</h2>
+            <h2 class="section-title">Por que Escolher o Receita Aqui?</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -781,7 +784,8 @@
         </div>
     </section>
 
-    <section class="tipos-receitas">
+    <!-- Revenues Section -->
+    <section id="receitas" class="tipos-receitas">
         <div class="container">
             <h2 class="section-title">Tipos de Receitas</h2>
             <div class="tipos-grid">
@@ -829,64 +833,6 @@
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq" class="faq">
-        <div class="container">
-            <h2 class="section-title">Perguntas Frequentes</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>O serviço tem validade legal?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        Sim! Todos os documentos emitidos têm validade legal conforme regulamentação do CFM (Conselho
-                        Federal de Medicina) para telemedicina.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Quanto tempo demora o atendimento?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        O atendimento é realizado em até 24 horas após o preenchimento do formulário, dependendo da
-                        disponibilidade médica.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Posso renovar qualquer tipo de receita?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        Renovamos receitas para medicamentos de uso contínuo. Medicamentos controlados podem ter
-                        restrições específicas.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>O atendimento é feito por médicos registrados?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        Sim, todos os nossos médicos são devidamente registrados no CRM e especializados em suas áreas
-                        de atuação.
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <span>Como recebo os documentos?</span>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        Os documentos são enviados digitalmente por email em formato PDF com assinatura digital válida.
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Form Section -->
     <section id="form" class="form-section">
         <div class="container">
@@ -907,16 +853,16 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3><i class="fas fa-heartbeat"></i> Receita Já</h3>
+                    <h3><i class="fas fa-heartbeat"></i> Receita Aqui</h3>
                     <p>Telemedicina especializada em renovação de receitas, pedidos de exames e atestados de aptidão
                         física.</p>
                 </div>
                 <div class="footer-section">
                     <h3>Contato</h3>
                     <ul>
-                        <li><i class="fas fa-phone"></i> (11) 9999-9999</li>
-                        <li><i class="fas fa-envelope"></i> contato@receitaja.com.br</li>
-                        <li><i class="fas fa-map-marker-alt"></i> São Paulo, SP</li>
+                        <li><i class="fas fa-phone"></i> (11) 913491842</li>
+                        <li><i class="fas fa-envelope"></i> contato@receitaaqui.com.br</li>
+                        <li><i class="fas fa-map-marker-alt"></i> R. do Estilo Barroco, São Paulo - SP</li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -930,36 +876,18 @@
                 <div class="footer-section">
                     <h3>Links Úteis</h3>
                     <ul>
-                        <li><a href="#faq">FAQ</a></li>
                         <li><a href="#">Política de Privacidade</a></li>
                         <li><a href="#">Termos de Uso</a></li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 Receita Já. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Receita Aqui. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Floating CTA -->
-    <button class="floating-cta" onclick="document.getElementById('form').scrollIntoView()">
-        <i class="fas fa-comments"></i> Iniciar Consulta
-    </button>
-
     <script>
-        // FAQ Toggle
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const answer = question.nextElementSibling;
-                const icon = question.querySelector('i');
-
-                answer.classList.toggle('active');
-                icon.classList.toggle('fa-chevron-down');
-                icon.classList.toggle('fa-chevron-up');
-            });
-        });
-
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
