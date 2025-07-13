@@ -105,6 +105,13 @@
             z-index: 1;
         }
 
+        .action-hero {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+        }
+
         .hero-text h1 {
             font-size: 2.8rem;
             margin-bottom: 1rem;
@@ -117,14 +124,7 @@
             opacity: 0.9;
         }
 
-        .action-hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-
-        .cta-button {
+        .primary-button {
             background: linear-gradient(45deg, #25D366, #128C7E);
             color: white;
             padding: 15px 40px;
@@ -142,15 +142,28 @@
             overflow: hidden;
         }
 
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(18, 140, 126, 0.4);
+        .secundary-button {
+            background: whitesmoke;
+            color: #1e3c72;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+            box-shadow: 0 4px 12px rgba(18, 140, 126, 0.3);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
         }
 
-        .btn-receitas {
-            color: white;
-            font-weight: 600;
-            font-size: 1.1rem;
+        .secundary-button:hover,
+        .primary-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(18, 140, 126, 0.4);
         }
 
         .hero-image {
@@ -309,6 +322,14 @@
             margin-bottom: 1rem;
         }
 
+        .action-target-audience {
+            display: flex;
+            margin-top: 2rem;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+        }
+
         /* Form Section */
         .form-section {
             padding: 80px 0;
@@ -337,7 +358,7 @@
         /* Testimonials */
         .testimonials {
             padding: 80px 0;
-            background: #f8f9fa;
+            background: white;
         }
 
         .testimonials-grid {
@@ -348,7 +369,7 @@
         }
 
         .testimonial {
-            background: white;
+            background: #f8f9fa;
             padding: 2rem;
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
@@ -366,13 +387,13 @@
         }
 
         .tipos-receitas {
-            padding: 80px 0;
+            padding: 40px 0;
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         }
 
         .tipos-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
             margin-top: 3rem;
         }
@@ -385,6 +406,8 @@
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s, box-shadow 0.3s;
             border-top: 4px solid #2a5298;
+            display: flex;
+            flex-direction: column;
         }
 
         .tipo-card:hover {
@@ -393,77 +416,139 @@
         }
 
         .tipo-icon {
-            font-size: 3rem;
-            color: #2a5298;
-            margin-bottom: 1.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* altura padronizada para o espaço da imagem */
+            height: 250px;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .tipo-icon img {
+            max-height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+            /* exibe a imagem inteira sem cortar */
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
 
         .tipo-card h3 {
             color: #1e3c72;
-            margin-bottom: 1rem;
             font-size: 1.4rem;
+            flex-shrink: 0;
         }
 
         .tipo-card p {
             color: #666;
             line-height: 1.6;
             margin-bottom: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            text-align: center;
         }
 
-        .tipo-examples {
-            background: #f8f9fa;
-            padding: 1rem;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            color: #555;
+        .tipo-icon-large img {
+            max-width: 200px;
+            height: 100px;
+            object-fit: cover;
         }
 
-        .tipo-examples strong {
-            color: #2a5298;
+        .contact-section {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            color: #1e3c72;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="white" opacity="0.1"><polygon points="0,0 1000,100 1000,0"/></svg>');
+            background-size: cover;
+        }
+
+        .contact-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+
+        .contact-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 3rem;
+            opacity: 0.95;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
         }
 
         /* Footer */
         footer {
-            background: #1e3c72;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             color: white;
             padding: 60px 0 20px;
+            font-size: 15px;
         }
 
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 3rem;
         }
 
-        .footer-section h3 {
-            margin-bottom: 1rem;
+        .card-footer-info {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .card-footer-info h4 {
             color: #64b5f6;
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section ul li a {
-            color: #ccc;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .footer-section ul li a:hover {
-            color: #64b5f6;
+            font-size: 1.2rem;
         }
 
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
-            border-top: 1px solid #333;
-            color: #ccc;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            color: #b3e5fc;
+        }
+
+        .footer-bottom p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .card-footer-info {
+                padding: 1rem;
+            }
+
+            footer {
+                padding: 40px 0 20px;
+            }
         }
 
         /* Responsive */
@@ -479,6 +564,14 @@
             .hero-content {
                 grid-template-columns: 1fr;
                 text-align: center;
+            }
+
+            .action-hero {
+                flex-direction: column;
+            }
+
+            .action-target-audience {
+                flex-direction: column;
             }
 
             .hero-text h1 {
@@ -527,25 +620,19 @@
             animation: fadeInUp 0.6s ease-out;
         }
 
-        /* Floating Action Button */
-        .floating-cta {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
-            color: white;
-            border: none;
-            border-radius: 50px;
-            padding: 15px 25px;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 5px 20px rgba(255, 107, 107, 0.3);
-            z-index: 1000;
-            transition: transform 0.3s;
-        }
+        @media (max-width: 768px) {
+            .contact-title {
+                font-size: 2rem;
+            }
 
-        .floating-cta:hover {
-            transform: scale(1.1);
+            .contact-subtitle {
+                font-size: 1.1rem;
+            }
+
+            .whatsapp-button {
+                padding: 15px 30px;
+                font-size: 1.1rem;
+            }
         }
     </style>
 </head>
@@ -583,10 +670,10 @@
                         receitas azuis e amarelas e solicitar exames de forma rápida e segura.
                     </p>
                     <div class="action-hero">
-                        <a href="https://wa.me/" target="_blank" class="cta-button">
+                        <a href="https://wa.me/" target="_blank" class="primary-button">
                             <i class="fab fa-whatsapp"></i> Iniciar Agora
                         </a>
-                        <a href="#receitas" class="btn-receitas">
+                        <a href="#receitas" class="secundary-button">
                             Tipos de receitas
                         </a>
                     </div>
@@ -656,7 +743,7 @@
                         <i class="fas fa-user-clock"></i>
                     </div>
                     <h3>Pessoas Ocupadas</h3>
-                    <p>Profissionais que não têm tempo para consultas presenciais frequentes.</p>
+                    <p>Pacientes que não têm tempo para consultas presenciais frequentes ou ir em clinicas.</p>
                 </div>
                 <div class="audience-card">
                     <div class="audience-icon">
@@ -670,8 +757,16 @@
                         <i class="fas fa-map-marker-alt"></i>
                     </div>
                     <h3>Áreas Remotas</h3>
-                    <p>Pessoas que vivem longe de centros médicos ou têm acesso limitado a especialistas.</p>
+                    <p>Quem precisa da receita com urgência ou mora longe de centros médicos</p>
                 </div>
+            </div>
+            <div class="action-target-audience">
+                <a href="#form" class="secundary-button">
+                    Iniciar Atendimento
+                </a>
+                <a href="https://wa.me/" target="_blank" class="primary-button">
+                    <i class="fab fa-whatsapp"></i> Fale Conosco
+                </a>
             </div>
         </div>
     </section>
@@ -687,7 +782,7 @@
                         <div class="step-content">
                             <h3>Qual receita você deseja renovar?</h3>
                             <p>
-                                Envie uma foto ou PDF da receita anterior aqui mesmo ou 
+                                Envie uma foto ou PDF da receita anterior aqui mesmo ou
                                 informe a medicação pelo WhatsApp.
                                 Serão mandadas as instruções para confirmar o pagamento, cartão ou PIX.
                             </p>
@@ -698,9 +793,9 @@
                         <div class="step-content">
                             <h3>Avaliação médica</h3>
                             <p>
-                                Um médico irá analisar sua solicitação e definir a 
+                                Um médico irá analisar sua solicitação e definir a
                                 conduta adequada (o médico têm autonomia):
-                                emissão da receita ou solicitação de informações complementares, 
+                                emissão da receita ou solicitação de informações complementares,
                                 se necessário.
                             </p>
                         </div>
@@ -710,8 +805,8 @@
                         <div class="step-content">
                             <h3>Receba sua receita</h3>
                             <p>
-                                Receitas controladas tipo BRANCA são enviadas por e-mail ou WhatsApp. 
-                                Para medicamentos com receituário controlado (AZUL OU AMARELA). 
+                                Receitas controladas tipo BRANCA são enviadas por e-mail ou WhatsApp.
+                                Para medicamentos com receituário controlado (AZUL OU AMARELA).
                                 o envio é feito pelos Correios via carta registrada ou Sedex (com taxa adicional).
                             </p>
                         </div>
@@ -719,6 +814,45 @@
                 </div>
                 <div class="how-it-works-image">
                     <img src="./img/undraw_document-analysis_3c0y.svg" alt="Processo Online" width="400">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="features" style="background: linear-gradient(135deg, #e8f5e8 0%, #f1f8e9 100%);">
+        <div class="container">
+            <h2 class="section-title">Por que Escolher o Receita Aqui?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Atendimento Rápido 100% Online</h3>
+                    <p>
+                        Receba a receita por Whatsapp (ou SEDEX receita azul e amarela).
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <h3>Acesso 24/7</h3>
+                    <p>Disponível a qualquer hora, em qualquer lugar, pelo seu dispositivo.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Preços Acessíveis</h3>
+                    <p>Valores justos e transparentes, sem taxas ocultas.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </div>
+                    <h3>Documentos Digitais</h3>
+                    <p>Receitas em formato digital, válidos em qualquer farmácia do Brasil.</p>
                 </div>
             </div>
         </div>
@@ -754,36 +888,6 @@
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section class="features" style="background: linear-gradient(135deg, #e8f5e8 0%, #f1f8e9 100%);">
-        <div class="container">
-            <h2 class="section-title">Por que Escolher o Receita Aqui?</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3>Economia de Tempo</h3>
-                    <p>Não perca horas em filas de consultório. Resolva tudo online em poucos minutos.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Segurança Total</h3>
-                    <p>Seus dados são protegidos com criptografia de ponta e seguimos todas as normas da LGPD.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-money-bill-wave"></i>
-                    </div>
-                    <h3>Preço Justo</h3>
-                    <p>Valores transparentes e acessíveis, sem taxas ocultas ou surpresas.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Revenues Section -->
     <section id="receitas" class="tipos-receitas">
         <div class="container">
@@ -791,50 +895,50 @@
             <div class="tipos-grid">
                 <div class="tipo-card">
                     <div class="tipo-icon">
-                        <i class="fas fa-heart"></i>
+                        <img src="./img/receita-branca-simples.jpg" />
                     </div>
-                    <h3>Receitas Cardiovasculares</h3>
-                    <p>Medicamentos para controle de pressão arterial, colesterol e outras condições cardíacas.</p>
-                    <div class="tipo-examples">
-                        <strong>Exemplos:</strong> Losartana, Atenolol, Sinvastatina, Aspirina
-                    </div>
+                    <h3>Branca simples</h3>
+                    <p>
+                        Tipo mais comum, usada para medicamentos sem controle especial.
+                        Pode incluir remédios isentos de prescrição ou de uso contínuo.
+                    </p>
                 </div>
                 <div class="tipo-card">
                     <div class="tipo-icon">
-                        <i class="fas fa-tint"></i>
+                        <img src="./img/receita-branca-especial.jpg" />
                     </div>
-                    <h3>Receitas para Diabetes</h3>
-                    <p>Medicamentos para controle glicêmico e tratamento do diabetes tipo 1 e 2.</p>
-                    <div class="tipo-examples">
-                        <strong>Exemplos:</strong> Metformina, Glibenclamida, Insulina, Gliclazida
-                    </div>
+                    <h3>Branca Especial</h3>
+                    <p>
+                        Medicamentos controlados das listas C1 a C5
+                        Duas vias. Validade: até 30 dias.
+                    </p>
                 </div>
                 <div class="tipo-card">
                     <div class="tipo-icon">
-                        <i class="fas fa-pills"></i>
+                        <img src="./img/receita-azul.jpg" />
                     </div>
-                    <h3>Receitas de Uso Contínuo</h3>
-                    <p>Medicamentos para condições crônicas que necessitam de uso prolongado.</p>
-                    <div class="tipo-examples">
-                        <strong>Exemplos:</strong> Anticonvulsivantes, Antidepressivos, Hormônios
-                    </div>
+                    <h3>Azul</h3>
+                    <p>
+
+                        Um medicamento por receita. Validade: 30 dias. Rastreada.
+                    </p>
                 </div>
                 <div class="tipo-card">
                     <div class="tipo-icon">
-                        <i class="fas fa-lungs"></i>
+                        <img src="./img/receita-amarela.jpg" />
                     </div>
-                    <h3>Receitas Respiratórias</h3>
-                    <p>Medicamentos para asma, bronquite e outras condições respiratórias.</p>
-                    <div class="tipo-examples">
-                        <strong>Exemplos:</strong> Bombinhas, Corticoides, Broncodilatadores
-                    </div>
+                    <h3>Amarela</h3>
+                    <p>
+
+                        Controle rigoroso, via única. Validade: 30 dias. Quantidade limitada a 30 dias de tratamento.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Form Section -->
-    <section id="form" class="form-section">
+    <section id="contact" class="form-section">
         <div class="container">
             <h2 class="section-title">Inicie Seu Atendimento</h2>
             <div class="form-container">
@@ -848,41 +952,58 @@
         </div>
     </section>
 
+    <!-- talk to us -->
+    <section id="fale-conosco" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="contact-title">Dúvidas? Fale Conosco!</h2>
+                <p class="contact-subtitle">
+                    Com um atendimento personalizado e eficiente,
+                    garantimos a você praticidade e comodidade, evitando
+                    filas e burocracias.
+                </p>
+
+                <a href="https://wa.me/" target="_blank" class="primary-button">
+                    <i class="fab fa-whatsapp"></i> Atendimento Imediato
+                </a>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
-    <footer id="contact">
+    <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3><i class="fas fa-heartbeat"></i> Receita Aqui</h3>
-                    <p>Telemedicina especializada em renovação de receitas, pedidos de exames e atestados de aptidão
-                        física.</p>
+                    <div class="card-footer-info">
+                        <h4>Renova Aqui</h4>
+                        <p>Uma marca do Instituto Psiquiatria Viva</p>
+                        <p><strong>Endereço:</strong> R. do Estilo Barroco, São Paulo - SP</p>
+                        <p><strong>Contato:</strong> (11) 91349-1842</p>
+                    </div>
                 </div>
+
                 <div class="footer-section">
-                    <h3>Contato</h3>
-                    <ul>
-                        <li><i class="fas fa-phone"></i> (11) 913491842</li>
-                        <li><i class="fas fa-envelope"></i> contato@receitaaqui.com.br</li>
-                        <li><i class="fas fa-map-marker-alt"></i> R. do Estilo Barroco, São Paulo - SP</li>
-                    </ul>
+                    <div class="card-footer-info">
+                        <h4>Responsável Técnico</h4>
+                        <p>Dr. Tiago Marinho Rodrigues</p>
+                        <p><strong>CRM:</strong> 256758/SP</p>
+                        <p><strong>CNS PSIQUIATRA:</strong> 709608607486570</p>
+                    </div>
                 </div>
+
                 <div class="footer-section">
-                    <h3>Serviços</h3>
-                    <ul>
-                        <li><a href="#services">Renovação de Receitas</a></li>
-                        <li><a href="#services">Pedidos de Exames</a></li>
-                        <li><a href="#services">Atestados de Aptidão</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Links Úteis</h3>
-                    <ul>
-                        <li><a href="#">Política de Privacidade</a></li>
-                        <li><a href="#">Termos de Uso</a></li>
-                    </ul>
+                    <div class="card-footer-info">
+                        <h4>Institucional</h4>
+                        <p><strong>Instituto Psiquiatria Viva</strong></p>
+                        <p>CNPJ: 54.733853/0001-15</p>
+                    </div>
                 </div>
             </div>
+
             <div class="footer-bottom">
-                <p>&copy; 2025 Receita Aqui. Todos os direitos reservados.</p>
+                <p>&copy; Copyright – Receita Aqui | Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
